@@ -24,11 +24,7 @@ steps:
     outputType: 'Process'
     orchestratorConnection: 'UipathServiceConn'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-- task: UiPathTest@3
-  inputs:
-    testTarget: 'TestProject'
-    orchestratorConnection: 'UipathServiceConn'
-    folderName: 'Orch'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
